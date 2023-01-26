@@ -1,2 +1,4 @@
-# espscript.lua
-esp script ig
+# ESP SCRIPT
+Controls:
+Z - Toggle esp on/off
+made by me ofc
