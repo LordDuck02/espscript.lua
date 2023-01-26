@@ -39,4 +39,4 @@ function toggle_esp()
 end
 
 -- if you're reading this, u can change 'Z' to any letter u want to (must be caps)
-game:GetService("ContextActionService"):BindAction("toggle_esp", toggle_esp, false, Enum.KeyCode.Z)
+game:GetService("ContextActionService"):BindAction("toggle_esp", toggle_esp, true, Enum.KeyCode.Z)
