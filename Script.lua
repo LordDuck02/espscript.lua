@@ -1,5 +1,6 @@
 local players = {}
 local chams = {}
+local UIS = game:GetService('UserInputService')
 local espEnabled = true
 
 function give_esp(plr)
@@ -30,13 +31,11 @@ game:GetService('Players').PlayerRemoving:connect(function(v)
 table.remove(players, v)
 end)
 
-
-function toggle_esp()
-    espEnabled = not espEnabled
-    for _,cham in pairs(chams) do
+-- if you're reading this, u can change 'F' to any letter u want to (must be caps)
+UIS.InputBegan:Connect(function(Input)
+    if Input.KeyCode == Enum.KeyCode.F then
+      espEnabled = not espEnabled
+      for _,cham in pairs(chams) do
         cham.Enabled = espEnabled
-    end
-end
-
--- if you're reading this, u can change 'Z' to any letter u want to (must be caps)
-game:GetService("ContextActionService"):BindAction("toggle_esp", toggle_esp, true, Enum.KeyCode.Z)
+        end
+end)
