@@ -1,4 +1,4 @@
 # ESP SCRIPT
 Controls:
-Z - Toggle esp on/off
+F - Toggle esp on/off
 made by me ofc
